@@ -9,9 +9,9 @@
         {%- if request.page_type == 'index' -%}
             <h1 class="header__heading">
         {%- endif -%}
-            <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
+            <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset ola">
               {%- if section.settings.logo != blank -%}
-                <img src="{{ section.settings.logo | image_url }}" height="100" width="200" alt="Logo" />
+                <img src="{{ section.settings.logo | image_url }}" height="100" width="200" alt="Log" />
               {%- else -%}
                 <span class="h2">{{ shop.name }}</span>
               {%- endif -%}
