@@ -272,12 +272,14 @@ input:active {
     }
 }
 @media (min-width: 320px) and (max-width: 579px) {
+    .min--container{padding-inline: 20px;}
     .discover-items {
         gap: 0px;
     }
     .all-products__cards {
         grid-template-columns: repeat(2, 1fr);
     }
+    .product-icons{flex-direction: column;}
     .footer-furniture__container{
         grid-template-columns: 1.5fr;
         text-align: center;
