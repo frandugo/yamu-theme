@@ -73,11 +73,6 @@ body{
       width: 100%;
     }
   }
-
-  /* .discover-item__info {
-
-  } */
-
 /*Our products*/
 .collection-all-products {  
     padding-bottom: 40px;  
@@ -245,23 +240,51 @@ body{
     background: transparent;
     border: none;
     border-bottom: thin solid  rgba(217, 217, 217, 1);
+    color: #eaeaea;
+
 }
 input:focus,
 input:active {
-   outline: none; /* Elimina el borde de enfoque y el borde blanco en ambos estados */
+   outline: none; 
 }
+
 .form-newsletter__button {
     background: transparent;
     outline: none;
     border: none;
     border-bottom: thin solid rgba(217, 217, 217, 1);
     color: rgba(217, 217, 217, 1);
+    cursor: pointer;
 }
 
 
 @media (min-width: 768px) and (max-width: 960px) {
+.min--container{padding-inline: 20px;}
 }
 @media (min-width: 580px) and (max-width: 767px) {
+    .min--container{padding-inline: 20px;}
+    .all-products__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer-furniture__container{
+        grid-template-columns: 1.5fr 1.5fr;
+        row-gap: 35px;
+    }
 }
 @media (min-width: 320px) and (max-width: 579px) {
+    .discover-items {
+        gap: 0px;
+    }
+    .all-products__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-furniture__container{
+        grid-template-columns: 1.5fr;
+        text-align: center;
+        gap: 48px;
+    }
+    .form-newsletter {
+        justify-content: center;
+    }
+    .footer-furniture__copyright{text-align: center;}
 }
