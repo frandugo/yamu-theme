@@ -1,51 +1,74 @@
-<section class="Furnitura-collection-list">
-  <div class="collection-list__container">
+<section class="furniture-collection-list">
+  <div class="min--container">
     <div class="container">
-      <div class="container-discover">
+      <div class="container__discover">
         {% assign title_discover = section.settings.title %}
         {% assign description_discover = section.settings.description %}
-
         {% if title_discover != blank and description_discover != blank %}
-          <h2 class="title--dark">{{ title_discover }}</h2>
-          <p class="paragraph--gray">{{ description_discover }}</p>
+          <h2 class="title--dark title--semi-medium text--bold">{{ title_discover }}</h2>
+          <p class="paragraph--gray paragraph--big text--regular">{{ description_discover }}</p>
           <div class="discover-items">
-            {% for collection in collections %}
-              <div class="discover-item">
-                <div class="discover-item__img">
-                  <img
-                    width="300"
-                    height=""
-                    src="{{ collection.featured_image | image_url }}"
-                    alt="{{ collection.title }}"
-                  >
+            {% assign collection_handles = section.settings.collection_one
+              | append: ','
+              | append: section.settings.collection_two
+              | append: ','
+              | append: section.settings.collection_three
+              | append: ','
+            %}
+            {% assign collection_list = collection_handles | split: ',' %}
+
+            {% for collection_handle in collection_list %}
+              {% assign selected_collection = collections[collection_handle] %}
+              {% if selected_collection %}
+                <div class="discover-item">
+                  <div class="discover-item__img">
+                    <img
+                      width="auto"
+                      height="auto"
+                      src="{{ selected_collection.featured_image | image_url }}"
+                      alt="{{ selected_collection.title }}"
+                    >
+                  </div>
+                  <div class="discover-item__info">
+                    <h3 class="title--dark title--small text--semi-bold">{{ selected_collection.title }}</h3>
+                  </div>
                 </div>
-                <div class="discover-item__info">
-                  <h3 class="title--dark">{{ collection.title }}</h3>
-                </div>
-              </div>
+              {% endif %}
             {% endfor %}
           </div>
         {% else %}
-          <h2 class="title--dark">Lorem ipsum</h2>
-          <p class="paragraph--gray">
+          <h2 class="title--dark title--semi-medium text--bold">Lorem ipsum</h2>
+          <p class="paragraph--gray paragraph--big text--regular">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil ab omnis odit ad sint, iusto beatae
             repellendus similique. Assumenda iusto dolore beatae saepe quaerat accusantium aperiam nobis eius corrupti.
           </p>
           <div class="discover-items">
-            {% for collection in collections %}
-              <div class="discover-item">
-                <div class="discover-item__img">
-                  <img
-                    width="300"
-                    height=""
-                    src="{{ collection.featured_image | image_url }}"
-                    alt="{{ collection.title }}"
-                  >
+            {% assign collection_handles = section.settings.collection_one
+              | append: ','
+              | append: section.settings.collection_two
+              | append: ','
+              | append: section.settings.collection_three
+              | append: ','
+            %}
+            {% assign collection_list = collection_handles | split: ',' %}
+
+            {% for collection_handle in collection_list %}
+              {% assign selected_collection = collections[collection_handle] %}
+              {% if selected_collection %}
+                <div class="discover-item">
+                  <div class="discover-item__img">
+                    <img
+                      width="auto"
+                      height="auto"
+                      src="{{ selected_collection.featured_image | image_url }}"
+                      alt="{{ selected_collection.title }}"
+                    >
+                  </div>
+                  <div class="discover-item__info">
+                    <h3 class="title--dark title--small text--semi-bold">{{ selected_collection.title }}</h3>
+                  </div>
                 </div>
-                <div class="discover-item__info">
-                  <h3 class="title--dark">Lorem ipsum</h3>
-                </div>
-              </div>
+              {% endif %}
             {% endfor %}
           </div>
         {% endif %}
@@ -53,37 +76,7 @@
     </div>
   </div>
 </section>
-<style>
-  .container {
-    max-width: 1242px;
-    margin: 0 auto;
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .Furnitura-collection-list {
-  }
-  .collection-list__container {
-    margin: 0;
-  }
-  .container-discover {
-  }
-  .title--dark {
-    color: black;
-    font-weight: 500;
-  }
-  .paragraph--gray {
-    color: gray;
-    font-weight: 300;
-  }
-  .discover-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-  .discover-item {
-  }
-</style>
+
 {% schema %}
 {
   "name": "List Collections",
@@ -97,6 +90,21 @@
       "type": "textarea",
       "id": "description",
       "label": "Description"
+    },
+    {
+      "type": "collection",
+      "id": "collection_one",
+      "label": "select collection 1"
+    },
+    {
+      "type": "collection",
+      "id": "collection_two",
+      "label": "select collection  2"
+    },
+    {
+      "type": "collection",
+      "id": "collection_three",
+      "label": "select collection 3"
     }
   ],
   "presets": [
