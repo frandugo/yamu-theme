@@ -1,0 +1,167 @@
+<section class="furniture-hero">
+    <div class="container">
+        <div class="furniture-hero__content">
+            <div class="furniture-hero__text-box">
+                <p class="furniture-hero__subtitle">{{ section.settings.subtitle }}</p>
+                <h1 class="furniture-hero__title">{{ section.settings.title }}</h1>
+                <p class="furniture-hero__paragraph">{{ section.settings.paragraph | strip_html }}</p>
+                <a 
+                    href="{{ section.settings.link }}" 
+                    class="btn" 
+                    style="background-color: {{  section.settings.button_color }};"
+                >
+                        {{ section.settings.button_text }}
+                </a>
+            </div>    
+        </div>
+        <div class="furniture-hero__products">
+            <div class="furniture-hero__product">
+                <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/hero-product-1.jpg?v=1634130000" alt="Product 1" width="" height="">
+                <h2>Lolito</h2>
+                <div class="furniture-hero__prices">
+                    <span>$120</span>
+                    <span class="furtinure-hero__price--line">$100</span>
+                </div>     
+            </div>
+            <div class="furniture-hero__product">
+                <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/hero-product-1.jpg?v=1634130000" alt="Product 1" width="" height="">
+                <h2>Lolito</h2>
+                <div class="furniture-hero__prices">
+                    <span>$120</span>
+                    <span class="furtinure-hero__price--line">$100</span>
+                </div>     
+            </div>
+            <div class="furniture-hero__product">
+                <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/hero-product-1.jpg?v=1634130000" alt="Product 1" width="" height="">
+                <h2>Lolito</h2>
+                <div class="furniture-hero__prices">
+                    <span>$120</span>
+                    <span class="furtinure-hero__price--line">$100</span>
+                </div>     
+            </div>
+        </div>
+    </div>      
+</section>
+<style>
+    .furniture-hero__products{
+        display: grid;
+        grid-template-columns: repeat(3, 20rem);
+        gap: 2rem;
+        position: absolute;
+        bottom: -270px;
+    }
+    .furniture-hero__product{
+        background: linear-gradient(to right, rgba(192, 192, 192, 0.9), rgba(255, 255, 255, 0.4), rgba(183, 195, 140, 0.7));
+        border: 1px solid var(--white);
+        border-radius: 25px;
+        padding: 120px 15px 15px;
+        h2{
+            color: var(--black);
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        img{
+            height: auto;
+            left: 0;
+            margin: 0 auto;
+            right: 0;
+            position: absolute;
+            width: 100%;
+        }
+    }
+    .furniture-hero__product__prices{
+        display: flex;
+        justify-content: space-between;
+    }
+    .furtinure-hero__price{
+        color: var(--green);
+        font-size: 23px;
+    }
+    .furtinure-hero__price--line{
+        color: var(--green);
+        font-size: 18px;
+        text-decoration: line-through;
+    }
+    .btn{
+        padding: 20px 60px;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .furniture-hero{
+        padding: 100px 0 180px;
+        color: white;
+        background-color: gray;
+        background-image: {% if section.settings.background_image %}url('{{ section.settings.background_image | file_url }}'){% endif %};
+        background-size: cover;
+        background-position: center;
+    }
+    .furniture-hero__content{
+        border-radius: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .furniture-hero__text-box{
+        background: #9AA969;
+        padding: 50px;
+        width: 643px;
+    }
+    .furniture-hero__subtitle{
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .furniture-hero__title{
+        font-size: 52px;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+    .furniture-hero__paragraph{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 40px;
+    }
+</style>    
+{% schema %}
+{
+  "name": "Furtinure Hero",
+  "settings": [
+    {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+        "type": "richtext",
+        "id": "paragraph",
+        "label": "Paragraph"
+    },
+    {
+        "type": "text",
+        "id": "link",
+        "label": "Link"
+    },
+    {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button text"
+    },
+    {
+        "type": "color",
+        "id": "button_color",
+        "label": "Button Background Color"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    }
+  ],
+  "blocks": [],
+}
+{% endschema %}

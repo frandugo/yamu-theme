@@ -2,9 +2,12 @@
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 
+<link rel="stylesheet" href="{{ 'header.css' | asset_url }}" media="print" onload="this.media='all'">
+
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
 <header class="header">
+  <div class="container">
     <div class="header__container">
         {%- if request.page_type == 'index' -%}
             <h1 class="header__heading">
@@ -84,6 +87,7 @@
         </div>
 
     </div>  
+  </div>    
 </header>
 
 {%- if settings.cart_type == "notification" -%}
