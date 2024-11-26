@@ -4,7 +4,7 @@
       <div class="all-products__title">
         {% assign products_collection = section.settings.all_products %}
         {% if products_collection %}
-          <h2 class="title--dark title--medium">{{ products_collection.title }}</h2>
+          <h2 class="title--dark title--medium">{{ section.settings.title | default: 'Our Products' }}</h2>
           <div class="all-products__cards">
             {% for product in products_collection.products %}
               <div class="all-products__card">
@@ -127,6 +127,11 @@
 {
   "name": "all products",
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
     {
       "type": "collection",
       "id": "all_products",
