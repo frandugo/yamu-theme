@@ -11,6 +11,40 @@
   "sections": {
     "furniture_hero_V7TdG9": {
       "type": "furniture-hero",
+      "blocks": {
+        "hero_product_block_64nxNt": {
+          "type": "hero_product_block",
+          "settings": {
+            "title": "Lolito",
+            "price": "120",
+            "price_discount": "185",
+            "image": "shopify://shop_images/Pexels_Photo_by_Darina_Belonogova.png"
+          }
+        },
+        "hero_product_block_K7M6Mc": {
+          "type": "hero_product_block",
+          "settings": {
+            "title": "Lolito",
+            "price": "120",
+            "price_discount": "185",
+            "image": "shopify://shop_images/Pexels_Photo_by_Hormel-3.png"
+          }
+        },
+        "hero_product_block_NU36z9": {
+          "type": "hero_product_block",
+          "settings": {
+            "title": "Lolito",
+            "price": "120",
+            "price_discount": "185",
+            "image": "shopify://shop_images/Pexels_Photo_by_Hormel-2.png"
+          }
+        }
+      },
+      "block_order": [
+        "hero_product_block_64nxNt",
+        "hero_product_block_K7M6Mc",
+        "hero_product_block_NU36z9"
+      ],
       "settings": {
         "subtitle": "New Arrival",
         "title": "Transform Your Space with Our New Collection",
@@ -21,26 +55,19 @@
         "background_image": "shopify://shop_images/scandinavian-interior-mockup-wall-decal-background_1.jpg"
       }
     },
-    "collection_list_j8LAUM": {
-      "type": "collection-list",
+    "furniture_collection_jnr4yX": {
+      "type": "furniture-collection",
       "settings": {
         "title": "Discover Our New Collection",
         "description": "From sleek, modern designs to timeless classics, each piece is crafted to enhance your living space and suit your unique style.",
-        "collection_one": "dining",
-        "collection_two": "living",
-        "collection_three": "bedroom"
-      }
-    },
-    "main_collection_product_grid_b8xa7G": {
-      "type": "main-collection-product-grid",
-      "settings": {
-        "all_products": "frontpage"
+        "collection_one": "",
+        "collection_two": "",
+        "collection_three": ""
       }
     }
   },
   "order": [
     "furniture_hero_V7TdG9",
-    "collection_list_j8LAUM",
-    "main_collection_product_grid_b8xa7G"
+    "furniture_collection_jnr4yX"
   ]
 }
