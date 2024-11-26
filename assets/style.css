@@ -78,6 +78,30 @@ body { font-family: 'poppinsregular' }
 .btn--small{padding: 25px 72px;}
 
 
+.nav__toggle{
+    position: relative;
+    z-index: 10;
+    display: block;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+.nav__toggle{
+    display: none;
+    width: 25px;
+    height: 50px;
+    background-image: var(--icon-togle-menu);
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    cursor: pointer;
+    transition: background-image .5s;
+}
+.nav__input{
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
 .furniture-hero__products{
     display: grid;
     grid-template-columns: repeat(3, 20rem);
@@ -394,6 +418,7 @@ input:active {
 @media (min-width: 320px) and (max-width: 579px) {
 
     .min--container{padding-inline: 45px;}
+    
     .discover-items {
         grid-template-columns: repeat(1, 1fr);
         gap: 0px;

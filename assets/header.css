@@ -14,4 +14,5 @@ header{}
 .header__menu .list-menu{
     display: flex;
     gap: 3rem;
+    padding-right: 20px;
 }

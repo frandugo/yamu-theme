@@ -30,6 +30,13 @@
 
       <div class="header__menu">
         <nav class="list-menu list-menu--inline">
+          <label class="nav__toggle">
+            <input
+              type="checkbox"
+              id="menu-input"
+              class="nav__input"
+            >
+          </label>
           {%- for link in section.settings.menu.links -%}
             <summary class="list-menu__item">
               <a
@@ -63,12 +70,18 @@
             {%- endif -%}
           </a>
         {%- endif -%}
-        <a href="">
+
+        <!-- Link to search page -->
+        <a href="/search">
           <span class="svg-wrapper">{{ 'icon_search.svg' | inline_asset_content }}</span>
         </a>
-        <a href="">
+
+        <!-- Link to wishlist page -->
+        <a href="/wishlist">
           <span class="svg-wrapper">{{ 'icons_like.svg' | inline_asset_content }}</span>
         </a>
+
+        <!-- Cart Icon -->
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{ 'icons_cart.svg' | inline_asset_content }}</span>
@@ -96,6 +109,30 @@
   -%}
 {%- endif -%}
 
+<style>
+  .list-menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    --icon-togle-menu: url({{'icon-hamburger.svg'|asset_url}});
+    --transform-menu-show: translate(-100%);
+  }
+  .list-menu:has(.nav__input:checked) {
+    --icon-togle-menu: url({{'icon-close.svg'|asset_url}});
+    --transform-menu-show: translate(0);
+  }
+  @media (max-width: 767px) {
+    .nav__toggle {
+      display: block;
+    }
+    .header__heading{padding-left: 21px;}
+    .list-menu__item {
+      display: none;
+    }
+    .header__icons {
+      display: none;
+    }
+  }
+</style>
 {% schema %}
 {
   "name": "t:sections.header.name",
