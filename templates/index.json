@@ -12,12 +12,12 @@
     "furniture_hero_V7TdG9": {
       "type": "furniture-hero",
       "settings": {
-        "subtitle": "",
-        "title": "",
-        "paragraph": "",
+        "subtitle": "New Arrival",
+        "title": "Transform Your Space with Our New Collection",
+        "paragraph": "<p>Discover our stunning new collection of furniture, designed to elevate your space with style and comfort.</p>",
         "link": "",
-        "button_text": "",
-        "button_color": "",
+        "button_text": "BUY Now",
+        "button_color": "#283618",
         "background_image": "shopify://shop_images/scandinavian-interior-mockup-wall-decal-background_1.jpg"
       }
     }
