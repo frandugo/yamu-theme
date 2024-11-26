@@ -1,128 +1,34 @@
-<section class="furniture-hero">
-    <div class="container">
-        <div class="furniture-hero__content">
-            <div class="furniture-hero__text-box">
-                <p class="furniture-hero__subtitle">{{ section.settings.subtitle }}</p>
-                <h1 class="furniture-hero__title">{{ section.settings.title }}</h1>
-                <p class="furniture-hero__paragraph">{{ section.settings.paragraph | strip_html }}</p>
-                <a 
-                    href="{{ section.settings.link }}" 
-                    class="btn" 
-                    style="background-color: {{  section.settings.button_color }};"
-                >
-                        {{ section.settings.button_text }}
-                </a>
-            </div>    
-        </div>
-        <div class="furniture-hero__products">
-            {% for block in section.blocks %}
-                <div class="furniture-hero__product">
-                    {% if block.settings.image %}
-                        <img src="{{ block.settings.image | file_url }}" alt="Product 1" width="" height="">
-                    {% endif %}    
-                    <h2>{{ block.settings.title }}</h2>
-                    <div class="furniture-hero__prices">
-                        <span class="furtinure-hero__price">$120</span>
-                        <span class="furtinure-hero__price furtinure-hero__price--line">$100</span>
-                    </div>     
-                </div>
-            {% endfor %}
-        </div>
-    </div>      
+<section class="furniture-inspiration">
+    <div class="furniture-inspiration__content">
+        <h2 class="furniture-hero__title">{{ section.settings.title }}</h2>
+        <p class="furniture-hero__paragraph">{{ section.settings.paragraph | strip_html }}</p>
+        <a 
+            href="{{ section.settings.link }}" 
+            class="btn" 
+            style="background-color: {{  section.settings.button_color }};"
+        >
+                {{ section.settings.button_text }}
+        </a> 
+    </div>
+    <div class="furniture-inspiration__slider furniture-inspiration__slider-js">
+        {% for block in section.blocks %}
+            <div class="furniture-inspiration__slide">
+                <img src="{{ block.settings.image | img_url: 'master' }}" alt="" width="" height="">
+            </div>
+        {% endfor %}
+    </div>     
 </section>
 <style scoped>
-    .furniture-hero__products{
+   .furniture-inspiration{
+        background: var(--green-light);
         display: grid;
-        grid-template-columns: repeat(3, 20rem);
-        gap: 2rem;
-        position: absolute;
-        bottom: -270px;
-    }
-    .furniture-hero__product{
-        position: relative;
-        background: linear-gradient(to right, rgba(192, 192, 192, 0.9), rgba(255, 255, 255, 0.4), rgba(183, 195, 140, 0.7));
-        border: 1px solid var(--white);
-        border-radius: 25px;
-        padding: 120px 15px 15px;
-        h2{
-            color: var(--black);
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        img{
-            left: 0;
-            margin: 0 auto;
-            right: 0;
-            position: absolute;
-            width: 43%;
-            top: -87px;
-        }
-    }
-    .furniture-hero__product__prices{
-        display: flex;
-        justify-content: space-between;
-    }
-    .furtinure-hero__price{
-        color: var(--green);
-        font-weight: 700;
-        font-size: 23px;
-    }
-    .furtinure-hero__price--line{
-        font-weight: 400;
-        font-size: 18px;
-        text-decoration: line-through;
-    }
-    .btn{
-        padding: 20px 60px;
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
-    .furniture-hero{
-        padding: 100px 0 180px;
-        color: white;
-        background-color: gray;
-        background: {% if section.settings.background_image %}url('{{ section.settings.background_image | image_url }}'){% endif %};
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        margin-bottom: 180px;
-    }
-    .furniture-hero__content{
-        border-radius: 10px;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .furniture-hero__text-box{
-        background: #9AA969;
-        padding: 50px;
-        width: 643px;
-    }
-    .furniture-hero__subtitle{
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-    .furniture-hero__title{
-        font-size: 52px;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-    .furniture-hero__paragraph{
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 40px;
+        padding: 50px 0;
     }
 </style>    
 {% schema %}
 {
-  "name": "hero",
+  "name": "Furniture Inspiration",
   "settings": [
-    {
-        "type": "text",
-        "id": "subtitle",
-        "label": "Subtitle"
-    },
     {
       "type": "text",
       "id": "title",
@@ -147,23 +53,13 @@
         "type": "color",
         "id": "button_color",
         "label": "Button Background Color"
-    },
-    {
-      "type": "image_picker",
-      "id": "background_image",
-      "label": "Background Image"
     }
   ],
   "blocks": [
     {
       "type": "content_block",
-      "name": "Content Block",
+      "name": "Slider",
       "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        },
         {
           "type": "image_picker",
           "id": "image",
@@ -172,10 +68,9 @@
       ]
     }
   ],
-  "max_blocks": 3,
   "presets": [
     {
-      "name": "Hero"
+      "name": "Furniture Inspiration",
     }
   ]
 }

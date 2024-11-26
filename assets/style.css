@@ -2,6 +2,7 @@
     --white: #fff;
     --black: #283618;
     --green: #7C8F3E;
+    --green-light: #E6EBD5;
 }
 @font-face {
     font-family: 'poppinsbold';
@@ -33,10 +34,9 @@
          url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-semibold-webfont.woff?v=1732591756') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-body {
-    font-family: 'poppinsregular';
-}
+} 
+body { font-family: 'poppinsregular' }
+
 .container{
     max-width: 1242px;
     margin: 0 auto;
