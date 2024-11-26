@@ -29,11 +29,21 @@
             "price_discount": "185",
             "image": "shopify://shop_images/Pexels_Photo_by_Hormel-3.png"
           }
+        },
+        "hero_product_block_NU36z9": {
+          "type": "hero_product_block",
+          "settings": {
+            "title": "Lolito",
+            "price": "120",
+            "price_discount": "185",
+            "image": "shopify://shop_images/Pexels_Photo_by_Hormel-2.png"
+          }
         }
       },
       "block_order": [
         "hero_product_block_64nxNt",
-        "hero_product_block_K7M6Mc"
+        "hero_product_block_K7M6Mc",
+        "hero_product_block_NU36z9"
       ],
       "settings": {
         "subtitle": "New Arrival",
