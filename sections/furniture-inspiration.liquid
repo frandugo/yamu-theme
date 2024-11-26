@@ -22,8 +22,8 @@
                     {% endif %}    
                     <h2>{{ block.settings.title }}</h2>
                     <div class="furniture-hero__prices">
-                        <span class="furtinure-hero__price">${{ block.settings.price }}</span>
-                        <span class="furtinure-hero__price furtinure-hero__price--line">${{ block.settings.price_discount }}</span>
+                        <span class="furtinure-hero__price">$120</span>
+                        <span class="furtinure-hero__price furtinure-hero__price--line">$100</span>
                     </div>     
                 </div>
             {% endfor %}
@@ -95,7 +95,6 @@
     }
     .furniture-hero__text-box{
         background: #9AA969;
-        border-radius: 10px;
         padding: 50px;
         width: 643px;
     }
@@ -157,23 +156,13 @@
   ],
   "blocks": [
     {
-      "type": "hero_product_block",
+      "type": "content_block",
       "name": "Content Block",
       "settings": [
         {
           "type": "text",
           "id": "title",
           "label": "Title"
-        },
-        {
-            "type": "text",
-            "id": "price",
-            "label": "Price"
-        },
-        {
-            "type": "text",
-            "id": "price_discount",
-            "label": "Price with discount"
         },
         {
           "type": "image_picker",

@@ -3,8 +3,39 @@
     --black: #283618;
     --green: #7C8F3E;
 }
+@font-face {
+    font-family: 'poppinsbold';
+    src: url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-bold-webfont.woff2?v=1732591756') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-bold-webfont.woff?v=1732591756') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-medium-webfont.woff2?v=1732591756') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-medium-webfont.woff?v=1732591756') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-regular-webfont.woff2?v=1732591756') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-regular-webfont.woff?v=1732591756') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinssemibold';
+    src: url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-semibold-webfont.woff2?v=1732591756') format('woff2'),
+         url('https://cdn.shopify.com/s/files/1/0792/7693/3304/files/poppins-semibold-webfont.woff?v=1732591756') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppinsregular';
 }
 .container{
     max-width: 1242px;
