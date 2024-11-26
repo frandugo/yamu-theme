@@ -4,7 +4,7 @@
       <div class="all-products__title">
         {% assign products_collection = section.settings.all_products %}
         {% if products_collection %}
-          <h2 class="title--dark title--medium">{{ section.settings.title | default: 'Our Products' }}</h2>
+          <h2 class="title--dark title--medium text--bold">{{ section.settings.title | default: 'Our Products' }}</h2>
           <div class="all-products__cards">
             {% for product in products_collection.products %}
               <div class="all-products__card">
@@ -84,7 +84,7 @@
             <a href="#" class="btn--border-dark-green btn--medium title--dark-green">Show More</a>
           </div>
         {% else %}
-          <h2 class="title--dark title--medium">Lorem Ipsum</h2>
+          <h2 class="title--dark title--medium text--bold">Lorem Ipsum</h2>
           <div class="all-products__cards">
             {% for product in (1..8) %}
               <div class="all-products__card">
