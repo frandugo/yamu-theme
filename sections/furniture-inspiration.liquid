@@ -1,3 +1,4 @@
+<script src="{{ 'furniture-inspiration-slider.js' | asset_url }}" defer="defer"></script>
 <section class="furniture-inspiration">
     <div class="furniture-inspiration__content">
         <h2 class="furniture-hero__title">{{ section.settings.title }}</h2>
@@ -22,7 +23,11 @@
    .furniture-inspiration{
         background: var(--green-light);
         display: grid;
+        grid-template-columns: 1fr 1fr;
         padding: 50px 0;
+    }
+    .furniture-inspiration__content{
+        padding: 100px;
     }
 </style>    
 {% schema %}
