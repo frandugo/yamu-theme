@@ -9,6 +9,7 @@ header{}
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 43px;
 }
 .header__menu .list-menu{
     display: flex;
