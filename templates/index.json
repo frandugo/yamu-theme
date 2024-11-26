@@ -54,9 +54,71 @@
         "button_color": "#283618",
         "background_image": "shopify://shop_images/scandinavian-interior-mockup-wall-decal-background_1.jpg"
       }
+    },
+    "furniture_collection_jnr4yX": {
+      "type": "furniture-collection",
+      "settings": {
+        "title": "Discover Our New Collection",
+        "description": "From sleek, modern designs to timeless classics, each piece is crafted to enhance your living space and suit your unique style.",
+        "collection_one": "dining",
+        "collection_two": "living",
+        "collection_three": "bedroom"
+      }
+    },
+    "furniture_our_products_EyhFgn": {
+      "type": "furniture-our-products",
+      "settings": {
+        "title": "Our Products",
+        "all_products": "all-products"
+      }
+    },
+    "furniture_inspiration_bQ3La3": {
+      "type": "furniture-inspiration",
+      "blocks": {
+        "content_block_tg9hC9": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        },
+        "content_block_YfmPdT": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        },
+        "content_block_mHD6gg": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        },
+        "content_block_PzTaNC": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_tg9hC9",
+        "content_block_YfmPdT",
+        "content_block_mHD6gg",
+        "content_block_PzTaNC"
+      ],
+      "settings": {
+        "title": "20+ Beautiful rooms  inspiration",
+        "paragraph": "<p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>",
+        "link": "#",
+        "button_text": "Explore More",
+        "button_color": "#283618"
+      }
     }
   },
   "order": [
-    "furniture_hero_V7TdG9"
+    "furniture_hero_V7TdG9",
+    "furniture_collection_jnr4yX",
+    "furniture_our_products_EyhFgn",
+    "furniture_inspiration_bQ3La3"
   ]
 }
