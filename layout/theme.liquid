@@ -254,7 +254,7 @@
         }
       }
     {% endstyle %}
-    
+
     {{ 'reset.css' | asset_url | stylesheet_tag }}
     {{ 'style.css' | asset_url | stylesheet_tag }}
 
@@ -268,17 +268,6 @@
       {{ 'component-price.css' | asset_url | stylesheet_tag }}
       {{ 'component-discounts.css' | asset_url | stylesheet_tag }}
     {%- endif -%}
-
-    {%- unless settings.type_body_font.system? -%}
-      {% comment %}theme-check-disable AssetPreload{% endcomment %}
-      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
-      {% comment %}theme-check-enable AssetPreload{% endcomment %}
-    {%- endunless -%}
-    {%- unless settings.type_header_font.system? -%}
-      {% comment %}theme-check-disable AssetPreload{% endcomment %}
-      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
-      {% comment %}theme-check-enable AssetPreload{% endcomment %}
-    {%- endunless -%}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}
