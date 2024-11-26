@@ -7,7 +7,7 @@
         <p class="furniture-hero__paragraph">{{ section.settings.paragraph | strip_html }}</p>
         <a
           href="{{ section.settings.link }}"
-          class="btn"
+          class="btn btn--big btn--green btn--uppercase"
           style="background-color: {{  section.settings.button_color }};"
         >
           {{ section.settings.button_text }}
@@ -31,12 +31,6 @@
   </div>
 </section>
 <style scoped>
-    .btn{
-        padding: 20px 60px;
-        color: white;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
     .furniture-hero{
         padding: 100px 0 180px;
         color: white;
@@ -47,9 +41,7 @@
         background-repeat: no-repeat;
         margin-bottom: 180px;
     }
-    @media (min-width: 580px) and (max-width: 767px){
-      .btn{padding: 16px 43px;}
-  }
+
 </style>
 {% schema %}
 {

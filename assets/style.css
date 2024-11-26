@@ -73,10 +73,14 @@ body { font-family: 'poppinsregular' }
     outline: none;
 }
 .btn--border-dark-green{border: 1px solid var(--dark-green);}
+
 .btn--big{padding: 25px 72px;}
 .btn--medium{padding: 13px 81px;}
 .btn--small{padding: 25px 72px;}
 
+.btn--green{ background: var(--green); color: var(--white);}
+
+.btn--uppercase{text-transform: uppercase;}
 
 .nav__toggle{
     position: relative;
@@ -103,11 +107,14 @@ body { font-family: 'poppinsregular' }
 }
 
 .furniture-hero__products{
+    bottom: -290px;
     display: grid;
     grid-template-columns: repeat(3, 20rem);
     gap: 2rem;
+    overflow: scroll;
+    padding: 120px 2px 0px;
     position: absolute;
-    bottom: -270px;
+    width: 100%;
 }
 .furniture-hero__product{
     position: relative;
@@ -374,7 +381,6 @@ body { font-family: 'poppinsregular' }
     border: none;
     border-bottom: thin solid  var(--gray-light);
     color: var(--gray-light);
-
 }
 input:focus,
 input:active {
@@ -390,22 +396,22 @@ input:active {
     cursor: pointer;
 }
 
-
-@media (min-width: 768px) and (max-width: 960px) {
-.furniture-hero__products {
-    grid-template-columns: repeat(3, 14rem);
-    gap: 1rem;
-    left: 20px;
-}
-.furniture-hero__product{padding: 111px 14px 10px;}
-.min--container{padding-inline: 20px;}
-}
-@media (min-width: 580px) and (max-width: 767px) {
-    .furniture-hero__title{font-size: 34px;}
-    .furniture-hero__products {
-        grid-template-columns: repeat(3, 13rem);
-        left: 20px;
+@media (max-width: 1280px) {
+    .container{
+        padding: 0 20px;
     }
+}
+
+@media (max-width: 960px) {
+    .min--container{padding-inline: 20px; }
+    .furniture-hero__content{
+        justify-content: center;
+    }
+    .furniture-hero__title{
+        font-size: 40px;    
+    }
+}
+@media (max-width: 767px) {
     .min--container{padding-inline: 20px;}
     .all-products__cards {
         grid-template-columns: repeat(3, 1fr);
@@ -415,7 +421,7 @@ input:active {
         row-gap: 35px;
     }
 }
-@media (min-width: 320px) and (max-width: 579px) {
+@media (max-width: 579px) {
 
     .min--container{padding-inline: 45px;}
     
