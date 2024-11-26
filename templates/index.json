@@ -71,11 +71,22 @@
         "title": "Our Products",
         "all_products": "all-products"
       }
+    },
+    "furniture_inspiration_bQ3La3": {
+      "type": "furniture-inspiration",
+      "settings": {
+        "title": "20+ Beautiful rooms  inspiration",
+        "paragraph": "<p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>",
+        "link": "#",
+        "button_text": "Explore More",
+        "button_color": "#283618"
+      }
     }
   },
   "order": [
     "furniture_hero_V7TdG9",
     "furniture_collection_jnr4yX",
-    "furniture_our_products_EyhFgn"
+    "furniture_our_products_EyhFgn",
+    "furniture_inspiration_bQ3La3"
   ]
 }
