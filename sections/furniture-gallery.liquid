@@ -1,0 +1,54 @@
+<section class="furniture-share">
+  <div class="container">
+    <div class="furniture-share__info">
+      <h3 class="title--dark-green">{{ section.settings.title | default: 'Share your setup with' }}</h3>
+      <h4 class="title--medium text--bold title--dark-green">
+        {{ section.settings.subtitle | default: '#Funitura_Furniture' }}
+      </h4>
+    </div>
+  </div>
+</section>
+<section class="furniture-gallery"></section>
+<style>
+  .furniture-share__info {
+    text-align: center;
+    h3 {
+      font-size: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  .furniture-gallery {
+    background: url({{ section.settings.image | image_url }});
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 360px 0;
+    margin-bottom: 54px;
+  }
+</style>
+{% schema %}
+{
+  "name": "Furniture gallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image Background"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Furniture gallery"
+    }
+  ]
+}
+{% endschema %}
