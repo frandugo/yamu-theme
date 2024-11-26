@@ -92,7 +92,7 @@
         padding: 100px 0 180px;
         color: white;
         background-color: gray;
-        background-image: {% if section.settings.background_image %}url('{{ section.settings.background_image | file_url }}'){% endif %};
+        background: {% if section.settings.background_image %}url('{{ section.settings.background_image | file_url }}'){% endif %};
         background-size: cover;
         background-position: center;
     }
@@ -124,7 +124,7 @@
 </style>    
 {% schema %}
 {
-  "name": "Furtinure Hero",
+  "name": "hero",
   "settings": [
     {
         "type": "text",
@@ -163,5 +163,10 @@
     }
   ],
   "blocks": [],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
 }
 {% endschema %}
