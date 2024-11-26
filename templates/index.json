@@ -74,6 +74,17 @@
     },
     "furniture_inspiration_bQ3La3": {
       "type": "furniture-inspiration",
+      "blocks": {
+        "content_block_tg9hC9": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_tg9hC9"
+      ],
       "settings": {
         "title": "20+ Beautiful rooms  inspiration",
         "paragraph": "<p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>",
