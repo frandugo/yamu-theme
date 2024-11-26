@@ -20,9 +20,27 @@
         "button_color": "#283618",
         "background_image": "shopify://shop_images/scandinavian-interior-mockup-wall-decal-background_1.jpg"
       }
+    },
+    "collection_list_j8LAUM": {
+      "type": "collection-list",
+      "settings": {
+        "title": "Discover Our New Collection",
+        "description": "From sleek, modern designs to timeless classics, each piece is crafted to enhance your living space and suit your unique style.",
+        "collection_one": "dining",
+        "collection_two": "living",
+        "collection_three": "bedroom"
+      }
+    },
+    "main_collection_product_grid_b8xa7G": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "all_products": "frontpage"
+      }
     }
   },
   "order": [
-    "furniture_hero_V7TdG9"
+    "furniture_hero_V7TdG9",
+    "collection_list_j8LAUM",
+    "main_collection_product_grid_b8xa7G"
   ]
 }
