@@ -30,10 +30,17 @@
         "collection_two": "frontpage",
         "collection_three": "frontpage"
       }
+    },
+    "main_collection_product_grid_b8xa7G": {
+      "type": "main-collection-product-grid",
+      "settings": {
+        "all_products": "frontpage"
+      }
     }
   },
   "order": [
     "furniture_hero_V7TdG9",
-    "collection_list_j8LAUM"
+    "collection_list_j8LAUM",
+    "main_collection_product_grid_b8xa7G"
   ]
 }
