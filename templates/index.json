@@ -71,11 +71,54 @@
         "title": "Our Products",
         "all_products": "all-products"
       }
+    },
+    "furniture_inspiration_bQ3La3": {
+      "type": "furniture-inspiration",
+      "blocks": {
+        "content_block_tg9hC9": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        },
+        "content_block_YfmPdT": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        },
+        "content_block_mHD6gg": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        },
+        "content_block_PzTaNC": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "content_block_tg9hC9",
+        "content_block_YfmPdT",
+        "content_block_mHD6gg",
+        "content_block_PzTaNC"
+      ],
+      "settings": {
+        "title": "20+ Beautiful rooms  inspiration",
+        "paragraph": "<p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>",
+        "link": "#",
+        "button_text": "Explore More",
+        "button_color": "#283618"
+      }
     }
   },
   "order": [
     "furniture_hero_V7TdG9",
     "furniture_collection_jnr4yX",
-    "furniture_our_products_EyhFgn"
+    "furniture_our_products_EyhFgn",
+    "furniture_inspiration_bQ3La3"
   ]
 }
