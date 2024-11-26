@@ -92,12 +92,19 @@
           "settings": {
             "image": "shopify://shop_images/Image.jpg"
           }
+        },
+        "content_block_PzTaNC": {
+          "type": "content_block",
+          "settings": {
+            "image": "shopify://shop_images/Image.jpg"
+          }
         }
       },
       "block_order": [
         "content_block_tg9hC9",
         "content_block_YfmPdT",
-        "content_block_mHD6gg"
+        "content_block_mHD6gg",
+        "content_block_PzTaNC"
       ],
       "settings": {
         "title": "20+ Beautiful rooms  inspiration",
