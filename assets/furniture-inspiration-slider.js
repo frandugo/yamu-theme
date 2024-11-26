@@ -1,5 +1,5 @@
 jQuery('.furniture-inspiration__slider-js').slick({
-    slidesToShow: 5,
+    slidesToShow: 3,
     dots: true,
     arrows: true,
     swipe: true,
