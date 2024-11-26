@@ -16,7 +16,7 @@
         </div>
         <div class="furniture-hero__products">
             <div class="furniture-hero__product">
-                <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/hero-product-1.jpg?v=1634130000" alt="Product 1" width="" height="">
+                <img src="{{ "https://cdn.shopify.com/s/files/1/0792/7693/3304/files/Pexels_Photo_by_Darina_Belonogova.png?v=1732582173" | file_url }}" alt="Product 1" width="" height="">
                 <h2>Lolito</h2>
                 <div class="furniture-hero__prices">
                     <span>$120</span>
@@ -24,7 +24,8 @@
                 </div>     
             </div>
             <div class="furniture-hero__product">
-                <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/hero-product-1.jpg?v=1634130000" alt="Product 1" width="" height="">
+              
+                <img src="{{ "https://cdn.shopify.com/s/files/1/0792/7693/3304/files/Pexels_Photo_by_Darina_Belonogova.png?v=1732582173" | file_url }}" alt="Product 1" width="" height="">
                 <h2>Lolito</h2>
                 <div class="furniture-hero__prices">
                     <span>$120</span>
@@ -32,7 +33,8 @@
                 </div>     
             </div>
             <div class="furniture-hero__product">
-                <img src="https://cdn.shopify.com/s/files/1/0455/2176/4502/files/hero-product-1.jpg?v=1634130000" alt="Product 1" width="" height="">
+
+                <img src="{{ "https://cdn.shopify.com/s/files/1/0792/7693/3304/files/Pexels_Photo_by_Darina_Belonogova.png?v=1732582173" | file_url }}" alt="Product 1" width="" height="">
                 <h2>Lolito</h2>
                 <div class="furniture-hero__prices">
                     <span>$120</span>
@@ -92,7 +94,7 @@
         padding: 100px 0 180px;
         color: white;
         background-color: gray;
-        background: {% if section.settings.background_image %}url('{{ section.settings.background_image | file_url }}'){% endif %};
+        background: {% if section.settings.background_image %}url('{{ section.settings.background_image | image_url }}'){% endif %};
         background-size: cover;
         background-position: center;
     }
