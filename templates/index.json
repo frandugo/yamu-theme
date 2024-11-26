@@ -113,12 +113,21 @@
         "button_text": "Explore More",
         "button_color": "#283618"
       }
+    },
+    "furniture_gallery_c3U6EB": {
+      "type": "furniture-gallery",
+      "settings": {
+        "title": "Share your setup with",
+        "subtitle": "#Funitura_Furniture",
+        "image": "shopify://shop_images/collage.png"
+      }
     }
   },
   "order": [
     "furniture_hero_V7TdG9",
     "furniture_collection_jnr4yX",
     "furniture_our_products_EyhFgn",
-    "furniture_inspiration_bQ3La3"
+    "furniture_inspiration_bQ3La3",
+    "furniture_gallery_c3U6EB"
   ]
 }
