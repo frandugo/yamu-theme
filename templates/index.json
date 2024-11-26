@@ -20,9 +20,20 @@
         "button_color": "#283618",
         "background_image": "shopify://shop_images/scandinavian-interior-mockup-wall-decal-background_1.jpg"
       }
+    },
+    "collection_list_j8LAUM": {
+      "type": "collection-list",
+      "settings": {
+        "title": "",
+        "description": "",
+        "collection_one": "frontpage",
+        "collection_two": "frontpage",
+        "collection_three": "frontpage"
+      }
     }
   },
   "order": [
-    "furniture_hero_V7TdG9"
+    "furniture_hero_V7TdG9",
+    "collection_list_j8LAUM"
   ]
 }
