@@ -24,9 +24,9 @@
     "collection_list_j8LAUM": {
       "type": "collection-list",
       "settings": {
-        "title": "",
-        "description": "",
-        "collection_one": "frontpage",
+        "title": "Discover Our New Collection",
+        "description": "From sleek, modern designs to timeless classics, each piece is crafted to enhance your living space and suit your unique style.",
+        "collection_one": "dining",
         "collection_two": "frontpage",
         "collection_three": "frontpage"
       }
