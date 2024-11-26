@@ -64,10 +64,18 @@
         "collection_two": "living",
         "collection_three": "bedroom"
       }
+    },
+    "furniture_our_products_EyhFgn": {
+      "type": "furniture-our-products",
+      "settings": {
+        "title": "Our Products",
+        "all_products": "all-products"
+      }
     }
   },
   "order": [
     "furniture_hero_V7TdG9",
-    "furniture_collection_jnr4yX"
+    "furniture_collection_jnr4yX",
+    "furniture_our_products_EyhFgn"
   ]
 }
