@@ -192,7 +192,7 @@ body { font-family: 'poppinsregular' }
     right: 0;  
     bottom: 0;  
     background-color: rgba(0, 0, 0, 0.5); 
-    color: white;  
+    color: var(--white);  
     display: flex;  
     flex-direction: column;  
     align-items: center;  
@@ -207,7 +207,7 @@ body { font-family: 'poppinsregular' }
 
 .btn-add-to-cart {  
     background-color: green;  
-    color: white;  
+    color: var(--white);  
     border: none;  
     padding: 13px 60px;  
     border-radius: 5px;  
@@ -225,7 +225,7 @@ body { font-family: 'poppinsregular' }
 
 .product-icons span {  
     cursor: pointer;  
-    color: #fff; 
+    color: var(--white); 
 }
 
 .icon__text{
@@ -247,7 +247,7 @@ body { font-family: 'poppinsregular' }
 .footer-furniture__container {
     display: grid;
     grid-template-columns: 1.5fr 0.9fr 0.9fr 0.7fr;
-    border-bottom: thin solid white;
+    border-bottom: thin solid var(--white);
     padding-bottom: 43px;
     margin-bottom: 38px;
 }

@@ -13,7 +13,7 @@
     <div class="furniture-inspiration__slider furniture-inspiration__slider-js">
         {% for block in section.blocks %}
             <div class="furniture-inspiration__slide">
-                <img src="{{ block.settings.image | img_url: 'master' }}" alt="" width="" height="">
+                <img src="{{ block.settings.image | image_url }}" alt="" width="" height="">
             </div>
         {% endfor %}
     </div>     
