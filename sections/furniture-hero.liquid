@@ -1,77 +1,36 @@
 <section class="furniture-hero">
-    <div class="container">
-        <div class="furniture-hero__content">
-            <div class="furniture-hero__text-box">
-                <p class="furniture-hero__subtitle">{{ section.settings.subtitle }}</p>
-                <h1 class="furniture-hero__title">{{ section.settings.title }}</h1>
-                <p class="furniture-hero__paragraph">{{ section.settings.paragraph | strip_html }}</p>
-                <a 
-                    href="{{ section.settings.link }}" 
-                    class="btn" 
-                    style="background-color: {{  section.settings.button_color }};"
-                >
-                        {{ section.settings.button_text }}
-                </a>
-            </div>    
+  <div class="container">
+    <div class="furniture-hero__content">
+      <div class="furniture-hero__text-box">
+        <p class="furniture-hero__subtitle">{{ section.settings.subtitle }}</p>
+        <h1 class="furniture-hero__title">{{ section.settings.title }}</h1>
+        <p class="furniture-hero__paragraph">{{ section.settings.paragraph | strip_html }}</p>
+        <a
+          href="{{ section.settings.link }}"
+          class="btn"
+          style="background-color: {{  section.settings.button_color }};"
+        >
+          {{ section.settings.button_text }}
+        </a>
+      </div>
+    </div>
+    <div class="furniture-hero__products">
+      {% for block in section.blocks %}
+        <div class="furniture-hero__product">
+          {% if block.settings.image %}
+            <img src="{{ block.settings.image | image_url }}" alt="Product 1" width="" height="">
+          {% endif %}
+          <h2>{{ block.settings.title }}</h2>
+          <div class="furniture-hero__prices">
+            <span class="furtinure-hero__price">${{ block.settings.price }}</span>
+            <span class="furtinure-hero__price furtinure-hero__price--line">${{ block.settings.price_discount }}</span>
+          </div>
         </div>
-        <div class="furniture-hero__products">
-            {% for block in section.blocks %}
-                <div class="furniture-hero__product">
-                    {% if block.settings.image %}
-                        <img src="{{ block.settings.image | image_url }}" alt="Product 1" width="" height="">
-                    {% endif %}    
-                    <h2>{{ block.settings.title }}</h2>
-                    <div class="furniture-hero__prices">
-                        <span class="furtinure-hero__price">${{ block.settings.price }}</span>
-                        <span class="furtinure-hero__price furtinure-hero__price--line">${{ block.settings.price_discount }}</span>
-                    </div>     
-                </div>
-            {% endfor %}
-        </div>
-    </div>      
+      {% endfor %}
+    </div>
+  </div>
 </section>
 <style scoped>
-    .furniture-hero__products{
-        display: grid;
-        grid-template-columns: repeat(3, 20rem);
-        gap: 2rem;
-        position: absolute;
-        bottom: -270px;
-    }
-    .furniture-hero__product{
-        position: relative;
-        background: linear-gradient(to right, rgba(192, 192, 192, 0.9), rgba(255, 255, 255, 0.4), rgba(183, 195, 140, 0.7));
-        border: 1px solid var(--white);
-        border-radius: 25px;
-        padding: 120px 15px 15px;
-        h2{
-            color: var(--black);
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        img{
-            left: 0;
-            margin: 0 auto;
-            right: 0;
-            position: absolute;
-            width: 43%;
-            top: -87px;
-        }
-    }
-    .furniture-hero__product__prices{
-        display: flex;
-        justify-content: space-between;
-    }
-    .furtinure-hero__price{
-        color: var(--green);
-        font-weight: 700;
-        font-size: 23px;
-    }
-    .furtinure-hero__price--line{
-        font-weight: 400;
-        font-size: 18px;
-        text-decoration: line-through;
-    }
     .btn{
         padding: 20px 60px;
         color: white;
@@ -88,41 +47,18 @@
         background-repeat: no-repeat;
         margin-bottom: 180px;
     }
-    .furniture-hero__content{
-        border-radius: 10px;
-        display: flex;
-        justify-content: flex-end;
-    }
-    .furniture-hero__text-box{
-        background: #9AA969;
-        border-radius: 10px;
-        padding: 50px;
-        width: 643px;
-    }
-    .furniture-hero__subtitle{
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-    .furniture-hero__title{
-        font-size: 52px;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 15px;
-    }
-    .furniture-hero__paragraph{
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 40px;
-    }
-</style>    
+    @media (min-width: 580px) and (max-width: 767px){
+      .btn{padding: 16px 43px;}
+  }
+</style>
 {% schema %}
 {
   "name": "Furniture Hero",
   "settings": [
     {
-        "type": "text",
-        "id": "subtitle",
-        "label": "Subtitle"
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
     },
     {
       "type": "text",
@@ -130,24 +66,24 @@
       "label": "Title"
     },
     {
-        "type": "richtext",
-        "id": "paragraph",
-        "label": "Paragraph"
+      "type": "richtext",
+      "id": "paragraph",
+      "label": "Paragraph"
     },
     {
-        "type": "text",
-        "id": "link",
-        "label": "Link"
+      "type": "text",
+      "id": "link",
+      "label": "Link"
     },
     {
-        "type": "text",
-        "id": "button_text",
-        "label": "Button text"
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text"
     },
     {
-        "type": "color",
-        "id": "button_color",
-        "label": "Button Background Color"
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Background Color"
     },
     {
       "type": "image_picker",
@@ -166,14 +102,14 @@
           "label": "Title"
         },
         {
-            "type": "text",
-            "id": "price",
-            "label": "Price"
+          "type": "text",
+          "id": "price",
+          "label": "Price"
         },
         {
-            "type": "text",
-            "id": "price_discount",
-            "label": "Price with discount"
+          "type": "text",
+          "id": "price_discount",
+          "label": "Price with discount"
         },
         {
           "type": "image_picker",
