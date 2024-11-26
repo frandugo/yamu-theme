@@ -4,74 +4,39 @@
       <div class="container__discover">
         {% assign title_discover = section.settings.title %}
         {% assign description_discover = section.settings.description %}
-        {% if title_discover != blank and description_discover != blank %}
-          <h2 class="title--dark title--semi-medium text--bold">{{ title_discover }}</h2>
-          <p class="paragraph--gray paragraph--big text--regular">{{ description_discover }}</p>
-          <div class="discover-items">
-            {% assign collection_handles = section.settings.collection_one
-              | append: ','
-              | append: section.settings.collection_two
-              | append: ','
-              | append: section.settings.collection_three
-              | append: ','
-            %}
-            {% assign collection_list = collection_handles | split: ',' %}
+        <h2 class="title--dark title--semi-medium text--bold">{{ title_discover | default: 'Lorem ipsum' }}</h2>
+        <p class="paragraph--gray paragraph--big text--regular">
+          {{ description_discover | default: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ' }}
+        </p>
+        <div class="discover-items">
+          {% assign collection_handles = section.settings.collection_one
+            | append: ','
+            | append: section.settings.collection_two
+            | append: ','
+            | append: section.settings.collection_three
+            | append: ','
+          %}
+          {% assign collection_list = collection_handles | split: ',' %}
 
-            {% for collection_handle in collection_list %}
-              {% assign selected_collection = collections[collection_handle] %}
-              {% if selected_collection %}
-                <div class="discover-item">
-                  <div class="discover-item__img">
-                    <img
-                      width="auto"
-                      height="auto"
-                      src="{{ selected_collection.featured_image | image_url }}"
-                      alt="{{ selected_collection.title }}"
-                    >
-                  </div>
-                  <div class="discover-item__info">
-                    <h3 class="title--dark title--small text--semi-bold">{{ selected_collection.title }}</h3>
-                  </div>
+          {% for collection_handle in collection_list %}
+            {% assign selected_collection = collections[collection_handle] %}
+            {% if selected_collection %}
+              <div class="discover-item">
+                <div class="discover-item__img">
+                  <img
+                    width="auto"
+                    height="auto"
+                    src="{{ selected_collection.featured_image | image_url }}"
+                    alt="{{ selected_collection.title }}"
+                  >
                 </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% else %}
-          <h2 class="title--dark title--semi-medium text--bold">Lorem ipsum</h2>
-          <p class="paragraph--gray paragraph--big text--regular">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nihil ab omnis odit ad sint, iusto beatae
-            repellendus similique. Assumenda iusto dolore beatae saepe quaerat accusantium aperiam nobis eius corrupti.
-          </p>
-          <div class="discover-items">
-            {% assign collection_handles = section.settings.collection_one
-              | append: ','
-              | append: section.settings.collection_two
-              | append: ','
-              | append: section.settings.collection_three
-              | append: ','
-            %}
-            {% assign collection_list = collection_handles | split: ',' %}
-
-            {% for collection_handle in collection_list %}
-              {% assign selected_collection = collections[collection_handle] %}
-              {% if selected_collection %}
-                <div class="discover-item">
-                  <div class="discover-item__img">
-                    <img
-                      width="auto"
-                      height="auto"
-                      src="{{ selected_collection.featured_image | image_url }}"
-                      alt="{{ selected_collection.title }}"
-                    >
-                  </div>
-                  <div class="discover-item__info">
-                    <h3 class="title--dark title--small text--semi-bold">{{ selected_collection.title }}</h3>
-                  </div>
+                <div class="discover-item__info">
+                  <h3 class="title--dark title--small text--semi-bold">{{ selected_collection.title }}</h3>
                 </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </div>
