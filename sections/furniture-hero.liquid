@@ -16,7 +16,7 @@
         </div>
         <div class="furniture-hero__products">
             <div class="furniture-hero__product">
-                <img src="{{ "https://cdn.shopify.com/s/files/1/0792/7693/3304/files/Pexels_Photo_by_Darina_Belonogova.png?v=1732582173" | file_url }}" alt="Product 1" width="" height="">
+                <img src="{{ 'Pexels_Photo_by_Darina_Belonogova.png' | file_url }}" alt="Product 1" width="" height="">
                 <h2>Lolito</h2>
                 <div class="furniture-hero__prices">
                     <span>$120</span>
@@ -25,7 +25,7 @@
             </div>
             <div class="furniture-hero__product">
               
-                <img src="{{ "https://cdn.shopify.com/s/files/1/0792/7693/3304/files/Pexels_Photo_by_Darina_Belonogova.png?v=1732582173" | file_url }}" alt="Product 1" width="" height="">
+                <img src="{{ 'Pexels_Photo_by_Hormel-2.png' | file_url }}" alt="Product 1" width="" height="">
                 <h2>Lolito</h2>
                 <div class="furniture-hero__prices">
                     <span>$120</span>
@@ -34,7 +34,7 @@
             </div>
             <div class="furniture-hero__product">
 
-                <img src="{{ "https://cdn.shopify.com/s/files/1/0792/7693/3304/files/Pexels_Photo_by_Darina_Belonogova.png?v=1732582173" | file_url }}" alt="Product 1" width="" height="">
+                <img src="{{ 'Pexels_Photo_by_Hormel-3.png' | file_url }}" alt="Product 1" width="" height="">
                 <h2>Lolito</h2>
                 <div class="furniture-hero__prices">
                     <span>$120</span>
@@ -53,6 +53,7 @@
         bottom: -270px;
     }
     .furniture-hero__product{
+        position: relative;
         background: linear-gradient(to right, rgba(192, 192, 192, 0.9), rgba(255, 255, 255, 0.4), rgba(183, 195, 140, 0.7));
         border: 1px solid var(--white);
         border-radius: 25px;
@@ -63,12 +64,12 @@
             margin-bottom: 10px;
         }
         img{
-            height: auto;
             left: 0;
             margin: 0 auto;
             right: 0;
             position: absolute;
-            width: 100%;
+            width: 43%;
+            top: -87px;
         }
     }
     .furniture-hero__product__prices{
@@ -97,6 +98,8 @@
         background: {% if section.settings.background_image %}url('{{ section.settings.background_image | image_url }}'){% endif %};
         background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 180px;
     }
     .furniture-hero__content{
         border-radius: 10px;
